@@ -2,3 +2,5 @@ godaddy-dyndns.conf
 godaddy-dyndns.log
 Session.vim
 .venv*
+__pycache__
+accounts.py
