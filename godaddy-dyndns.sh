@@ -9,8 +9,8 @@ if [ ! -d .venv ] ; then
   # python3 -m venv .venv
   virtualenv .venv
 fi
-source .venv/bin/activate
-pip3 install --upgrade pif git+git://github.com/penggu/pygodaddy.git#egg=pygodaddy
+#source .venv/bin/activate
+#pip3 install --upgrade pif git+git://github.com/penggu/pygodaddy.git#egg=pygodaddy
 python3 godaddy-dyndns.py
-deactivate
+#deactivate
 cd $OLD_PWD
