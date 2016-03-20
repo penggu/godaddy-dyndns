@@ -3,6 +3,6 @@ accounts = [
     {
         'username': 'GODADDY_USERNAME',
         'password': 'GODADDY_PASSWORD',
-        'domain': 'MY_AWESOME_DOMAIN.com'
+        'domains': ['domain1.com', 'domain2.com']
     }
 ]
