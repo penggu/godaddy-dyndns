@@ -3,6 +3,7 @@ import logging
 import pif
 
 from pygodaddy import GoDaddyAccount
+from ip_check import is_valid_ipv4_address as is_valid_ip
 from accounts import accounts
 
 def init(log_file):
@@ -82,7 +83,7 @@ def godaddy_ddns():
     else:
         logging.info('IP has been changed from "{0}" to "{1}"'.format(
             old_ip, new_ip))
-        if update_godaddy_dns(accounts, new_ip):
+        if is_valid_ip(new_ip) and update_godaddy_dns(accounts, new_ip):
             update_cached_ip(CACHED_IP_FILE, new_ip)
 
 def main():
